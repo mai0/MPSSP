@@ -26,12 +26,12 @@ def login():
         with open('Sequences/' + entry, 'w') as fid:
             fid.write(form.sequence.data)
 
-    
-        predict(entry)
-        with open('Results/%s.res' % entry, 'r') as fid:
-            features = fid.read()
-        flash(features)  # na to doume argotera
-
-        flash('Could not predict your features. Sorry about that!')
+        try:
+            predict(entry)
+            with open('Results/%s.res' % entry, 'r') as fid:
+                features = fid.read()
+            flash(features)  # na to doume argotera
+        except Exception:
+            flash('Could not predict your features. Sorry about that!')
 
     return render_template("login.html", form=form)
