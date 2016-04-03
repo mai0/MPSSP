@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>MPSSP</h1>
+        <p>A new approach on protein secondary structure prediction</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Information</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Method</h3>
+            <p>The method developed by MPSSP is based on a SVM model that utilizes the results of PSI-BLAST searches on the protein’s sequence. SVM is a supervised machine learning technology with statistical learning theory foundations. Based on the combina-tion of SVM and PSI-BLAST, we have optimized the prediction accuracy of b-sheets,from a given sequence dataset, by experi-menting on different kernels and different optimization processes.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h3>How to use</h3>
+            <p>The user can provide an amino acid sequence on the Submission Form and press 'Submit'. The result will be depicted on the screen.</p>
+        </div>
+
+        <!--<div class="col-md-4">
+            <h3>Management Scripts</h3>
+            <p>Using the Makefile, you can easily setup your development environment with a few simple commands. With the power of flask-script you can create your own commands with the flask app context setup for you.</p>
+        </div>-->
+    </div>
+
+    <!--<div class="row">
+        <div class="col-md-4">
+            <h3>Tests</h3>
+            <p>Example tests, built with py.test, are included in to demonstrate how to test a flask app.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Common Libraries</h3>
+            <p>The CSS Library Bootstrap is included, along with the Javascript libraries modernizr and jQuery.</p>
+        </div>
+    </div>-->
+{% endblock %}
