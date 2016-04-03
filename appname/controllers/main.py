@@ -5,7 +5,7 @@ from appname.extensions import cache
 from appname.forms import LoginForm
 
 import string, random  # to create random filenames
-from try_MPSSP import *
+from marina_mpssp import *
 
 main = Blueprint('main', __name__)
 
@@ -35,3 +35,4 @@ def login():
             flash('Could not predict your features. Sorry about that!')
 
     return render_template("login.html", form=form)
+
